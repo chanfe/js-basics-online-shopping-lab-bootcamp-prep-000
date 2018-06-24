@@ -21,10 +21,10 @@ function viewCart() {
     return "Your shopping cart is empty."
   }
   var cartList = `In your cart, you have ${cart[0].itemName} at $${cart[0].itemPrice}`;
-  for(let i = 1; i < cart.length;i++){
+  for(let i = 1; i < cart.length - 1;i++){
     cartList += `, ${cart[i].itemName} at $${cart[i].itemPrice}`;
   }
-  cartList += `.`
+  cartList += `and ${cart[cart.length].itemName} at $${cart[cart.length].itemPrice}.`
   return cartList;
 }
 
