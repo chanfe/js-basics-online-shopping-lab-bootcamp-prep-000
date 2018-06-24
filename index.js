@@ -20,7 +20,7 @@ function viewCart() {
 }
 
 function total() {
-  // write your code here
+  // write your code herd
 }
 
 function removeFromCart(item) {
