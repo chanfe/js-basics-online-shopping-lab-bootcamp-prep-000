@@ -17,11 +17,14 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  var cartList = `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}`;
-  for(let i = 0; i < cart.length;i++){
-    cartList += `, ${cart[i].itemName}`;
-    
+  if(cart.length < 1){
+    return ""
   }
+  var cartList = `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}`;
+  for(let i = 1; i < cart.length;i++){
+    cartList += `, ${cart[i].itemName} at ${cart[i].itemPrice}`;
+  }
+  cartList += `.`
   return cartList;
 }
 
