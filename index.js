@@ -29,11 +29,9 @@ function viewCart() {
   for(let i = 0; i < cart.length;i++){
     cartList += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
     if(i === cart.length){
-      
-      
+      cartList += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
     }
   }
-  cartList += `and ${cart[cart.length - 1 ].itemName} at $${cart[cart.length - 1].itemPrice}.`
   return cartList;
 }
 
