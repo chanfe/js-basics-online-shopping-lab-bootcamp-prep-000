@@ -18,7 +18,7 @@ function addToCart(item) {
 function viewCart() {
   // write your code here
   if(cart.length < 1){
-    return ""
+    return "Your shopping cart is empty."
   }
   var cartList = `In your cart, you have ${cart[0].itemName} at ${cart[0].itemPrice}`;
   for(let i = 1; i < cart.length;i++){
@@ -30,10 +30,16 @@ function viewCart() {
 
 function total() {
   // write your code herd
+  totalCost = 0;
+  for(let i = 1; i < cart.length;i++){
+    totalCost += cart[i].itemPrice;
+  }
+  return totalCost;
 }
 
 function removeFromCart(item) {
   // write your code here
+  
 }
 
 function placeOrder(cardNumber) {
