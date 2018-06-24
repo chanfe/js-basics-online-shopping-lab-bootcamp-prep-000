@@ -17,7 +17,7 @@ function addToCart(item) {
 
 function viewCart() {
   // write your code here
-  cartList = ``;
+  var cartList = ``;
   for(let i = 0; i < cart.length;i++){
     cartList += `${cart[i]}`;
     
