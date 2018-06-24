@@ -29,7 +29,7 @@ function viewCart() {
   }
   
   for(let i = 0; i < cart.length;i++){
-    if(i == cart.length){
+    if(i === cart.length - 1){
       cartList += `and ${cart[i].itemName} at $${cart[i].itemPrice}.`
       return cartList;
     }
