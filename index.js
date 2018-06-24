@@ -30,8 +30,8 @@ function viewCart() {
 
 function total() {
   // write your code herd
-  totalCost = 0;
-  for(let i = 1; i < cart.length;i++){
+  var totalCost = 0;
+  for(let i = 0; i < cart.length;i++){
     totalCost += cart[i].itemPrice;
   }
   return totalCost;
@@ -39,7 +39,11 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  
+  for(let i = 0; i < cart.length;i++){
+    if(item === cart[i].itemName){
+      
+    }
+  }
 }
 
 function placeOrder(cardNumber) {
