@@ -51,9 +51,8 @@ function total() {
 
 function removeFromCart(item) {
   // write your code here
-  cart = cart;
   for(let i = 0; i < cart.length;i++){
-    var isItem = cart[i].itemName;
+    var isItem = cart[0].itemName;
     if(isItem === item){
       cart.splice(i);
       return viewCart();
