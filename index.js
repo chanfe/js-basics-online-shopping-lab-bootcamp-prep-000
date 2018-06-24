@@ -21,8 +21,17 @@ function viewCart() {
     return "Your shopping cart is empty."
   }
   var cartList = `In your cart, you have `;
-  for(let i = 0; i < cart.length - 1;i++){
+  if(cart.length === 1){
+    cartList += `${cart[0].itemName} at $${cart[0].itemPrice}.`
+    return cartList;
+  }
+  
+  for(let i = 0; i < cart.length;i++){
     cartList += `${cart[i].itemName} at $${cart[i].itemPrice}, `;
+    if(i === cart.length){
+      
+      
+    }
   }
   cartList += `and ${cart[cart.length - 1 ].itemName} at $${cart[cart.length - 1].itemPrice}.`
   return cartList;
